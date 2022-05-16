@@ -1,6 +1,7 @@
 # Rails Facade Example
 
 This is non-functioning code. A collection of files to start a dialogue about how to structure facades and views for things.
+Start in the `controllers/some_controller.rb` file, and follow the thread from there.
 
 ## Contributing
 
