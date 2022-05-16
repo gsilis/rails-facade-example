@@ -1,0 +1,5 @@
+ul.comments
+  - facade.comments.each do |comment|
+    li class=comment_class_for(comment)
+      p.author = comment[:name]
+      p.text = comment[:text]

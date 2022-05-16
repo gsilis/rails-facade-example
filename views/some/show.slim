@@ -1,0 +1,9 @@
+.page.some-show
+  h1 = @facade.widget.title
+  = render partial: 'widgets/item', locals: { facade: @facade.widget }
+  hr
+  - if @facade.comments.present?
+    h1 = @facade.comments.description
+    = render partial: 'comments/list', locals: { facade: @facade.comments }
+  - else
+    = @facade.comments.description

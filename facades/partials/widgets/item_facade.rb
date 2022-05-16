@@ -4,6 +4,8 @@ module Facades
       class ItemFacade
         attr_reader :widget
 
+        delegate :present?, to: :widget
+
         def initialize(:widget)
           @widget = widget
         end
