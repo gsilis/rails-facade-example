@@ -1,0 +1,6 @@
+ul.widget-list
+  - facade.widgets.each do |widget|
+    li.widget
+      p.name = widget[:name]
+      p.rating = widget[:rating]
+      a href=widget_pat(id: widget[:id]) Details

@@ -1,0 +1,15 @@
+h1 Hello!
+p This is the home page
+
+- if @facade.announcement.present?
+  = render partial: 'announcements/show', locals: { facade: @facade.announcement }
+
+- if @facade.widgets.present?
+  - if @facade.widgets.at_least?(count: 5)
+    h2 Most Popular
+    .popular
+      = render partial: 'widgets/list', locals: { facade: @facade.widgets }
+  h2 Some Widgets!
+  = render partial: 'widgets/list', locals: { facade: @facade.widgets }
+- else
+  p There are no widgets to list
